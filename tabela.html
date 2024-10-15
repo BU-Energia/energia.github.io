@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Redes ITB">
+	<meta name="author" content="Intelbras">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/workspaces/queirozgab.github.io/assets/style.css">
+	<link href="https://fonts.cdnfonts.com/css/nunito-sans" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="shortcut icon" href="assets/img/icons/icon-48x48.png" />
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" />
+
+
+
+	<title>Suporte Redes</title>
+</head>
+
+<body>
+	<body>
+		<div class="wrapper">
+			<nav id="sidebar" class="sidebar text-dark">
+				<div class="sidebar-content js-simplebar">
+					<a href="https://intelbras.com.br" target="_blank" class="sidebar-brand text-center">
+						<img src="./assets/img/png/intelbras_marca.svg">
+					</a>
+					<ul class="sidebar-nav">
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="./index.html">
+								<div class="icon-container">
+									<img src="./assets/img/icons/home" style="width: 25px;">
+								</div>
+								<span class="align-middle">Início</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link actived" href="./tabela.html">
+								<div class="icon-container">
+									<img src="./assets/img/icons/tabel.png" style="width: 22px;">
+								</div>
+								<span class="align-middle">Portifólio (Técnico)</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link " href="./faq-roteadores.html">
+								<div class="icon-container">
+									<img src="./assets/img/icons/roteador.svg" style="width: 20px;">
+								</div>
+								<span class="align-middle">Roteadores</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="./faq-switch.html">
+								<div class="icon-container">
+									<img src="./assets/img/icons/switch.svg" style="width: 35px;">
+								</div>
+								<span class="align-middle">Switches</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a target="_blank" class="sidebar-link" href="https://chat.apps.intelbras.com.br/">
+								<div class="icon-container">
+									<i class="fa fa-headset fa-lg text-dark"></i>
+								</div>
+								<span class="align-middle">Chat online</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		<div class="main text-center">
+			<div class="row" style="margin-left: 0.1px;">
+				<nav class="w-100 navbar navbar-expand navbar-light border position-fixed"
+					style="z-index: 999; background-color: #f8f9fa;">
+					<div class="d-flex flex-row">
+						<div class="">
+							<a class="sidebar-toggle d-flex" id="sidebarToggle">
+								<i class="hamburger align-self-center"></i>
+							</a>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<main class="content">
+				<!-- Submenu tabela -->
+				<section id="faq-roteadores">
+					<!-- accordion -->
+					<div class="accordion w-100 mt-5"> <!-- espaço correto -->
+						</head>
+
+						<body>
+							<!-- <h2>Tabela comparativa de produtos da unidade de Redes Intelbras</h2> -->
+
+							<button class="button" onclick="showTable('table1')">Roteadores Corporativos</button>
+							<button class="button" onclick="showTable('table2')">Switches</button>
+						
+							<script>
+								function showTable(tableId) {
+									// Função exemplo para demonstrar o evento onclick
+									alert('Mostrar tabela: ' + tableId);
+								}
+							</script>
+
+							<div id="table1" class="hidden">
+								<div class="search-filter-container">
+									<input type="text" id="searchInput1" placeholder="Pesquisar por modelo..."
+										onkeyup="searchTable1()" class="search-input" />
+								</div>
+								<div class="scrollable-table">
+									<table border="1">
+										<thead class="table-header">
+											<tr>
+												<th>Modelo</th>
+												<th>Interface</th>
+												<th>Cobertura Aproximada</th>
+												<th>Raio Aproximado</th>
+												<th>Usuários Máx.</th>
+												<th>Datarate Máx. 2G</th>
+												<th>Datarate Máx. 5G</th>
+												<th>Padrão</th>
+												<th>Qtde Portas</th>
+												<th>Tensão</th>
+												<th>Tipo PoE</th>
+												<th>Handover</th>
+												<th>Inmaster</th>
+												<th>Garantia</th>
+												<th class="pagina-coluna">Página</th>
+											</tr>
+										</thead>
+										<tr>
+											<td class="modelo" style="text-decoration: underline; font-weight: bold;">
+												<img src="./assets/img/icons/verde.png" alt="Icon"
+													style="width: 20px; height: 20px; margin-left: 5px;">
+												AP 1250 AC MAX
+											</td>
+											<td class="rectangle-cell">
+												<div class="green-rectangle">Giga</div>
+											</td>
+											<td>450 m²</td>
+											<td>12 m</td>
+											<td>350 usuários</td>
+											<td>300 Mbps</td>
+											<td>866 Mbps</td>
+											<td class="wifi-standardD"></td>
+											<td>2 Portas</td>
+											<td>48V Passivo | 12 / 1,5A</td>
+											<td>802.3at</td>
+											<td><img src="./assets/img/icons/check.png" style="width: 15px;"></td>
+											<td><img src="./assets/img/icons/check.png" style="width: 15px;"></td>
+											<td>1 ano</td>
+											<td class="pagina-coluna">
+												<a href="https://www.intelbras.com/pt-br/access-point-dual-band-ac-de-alta-potencia-ap-1250-ac-max"
+													class="saiba-mais" target="_blank">Saiba mais</a>
+											</td>
+										</tr>
+										
+									</table>
+								</div>
+							</div>
+							<div id="table2" class="hidden">
+
+								<!-- Contêiner para alinhar o filtro à esquerda e a busca à direita -->
+
+								<div class="search-filter-container">
+									<div class="filter-buttons">
+										<button class="botao-filtro" onclick="toggleFiltros()">Filtro</button>
+									</div>
+									<input type="text" id="searchInput" placeholder="Pesquisar por modelo..."
+										onkeyup="searchTable17()" class="search-input" />
+								</div>
+
+								<!-- Seção de filtros -->
+								<div id="filtros" class="escondido">
+									<button class="botao-filtro" onclick="toggleFiltro('PoE')">Mostrar PoE</button>
+									<button class="botao-filtro" onclick="toggleFiltro('Não PoE')">Mostrar Não
+										PoE</button>
+									<button class="botao-filtro" onclick="toggleFiltro('Gerenciável')">Mostrar
+										Gerenciável</button>
+									<button class="botao-filtro" onclick="toggleFiltro('Não Gerenciável')">Mostrar Não
+										Gerenciável</button>
+									<button class="botao-filtro" onclick="toggleFiltro('Possui SFP')">Mostrar Possui
+										SFP</button>
+									<button class="botao-filtro" onclick="toggleFiltro('Não Possui SFP')">Mostrar Não
+										Possui SFP</button>
+									<button class="botao-filtro" onclick="resetFiltros()">Mostrar Todos</button>
+								</div>
+								<div class="scrollable-table">
+									<table border="1" id="tabelaProdutos">
+										<thead class="table-header">
+											<tr>
+												<th>Modelo</th>
+												<th>Interface</th>
+												<th onclick="sortTable(2)">Qtde Portas</th>
+												<th>Possui SFP</th>
+												<th>Gerenciável</th>
+												<th>PoE Ativo</th>
+												<th>Taxa de Encam. de Pacotes</th>
+												<th>Backplane</th>
+												<th>PoE Extender</th>
+												<th>PoE Por Porta</th>
+												<th>PoE Total</th>
+												<th>Qos</th>
+												<th>Garantia</th>
+												<th class="pagina-coluna">Página</th>
+											</tr>
+										</thead>
+										<tr>
+											<td class="modelo" style="text-decoration: underline; font-weight: bold;">
+												<img src="./assets/img/icons/verde.png" alt="Icon"
+													style="width: 20px; height: 20px; margin-left: 5px;">
+												S1118F-PA
+											</td>
+											<td class="rectangle-cell">
+												<div class="yellow-rectangle">Fast</div>
+											</td>
+											<td>16 Portas</td>
+											<td>
+												<div class="qwert">
+													<button class="info-button-curio">?</button>
+													<span class="tooltiptext">2 Combo</span>
+													<img src="./assets/img/icons/check.png" alt="Possui SFP"
+														style="width: 15px;">
+												</div>
+											</td>
+											<td><img src="./assets/img/icons/x-removebg-preview.png"
+													alt="Não Gerenciável" style="width: 15px;"></td>
+											<td><img src="./assets/img/icons/check.png" alt="PoE" style="width: 15px;">
+											</td>
+											<td>5,36 Mpps</td>
+											<td>7,2 Gbps</td>
+											<td><img src="./assets/img/icons/check.png" style="width: 15px;">
+											</td>
+											<td>30 W</td>
+											<td>125 W</td>
+											<td><img src="./assets/img/icons/check.png" style="width: 15px;">
+											</td>
+											<td>1 Ano</td>
+											<td><a href="https://www.intelbras.com/pt-br/switch-nao-gerenciavel-poe-18-portas-fast-ethernet-s1118f-pa"
+													class="saiba-mais" target="_blank">Saiba mais</a></td>
+										</tr>
+										
+									</table>
+							</div>
+					</div>
+				
+					<script>
+						function showTable(tableId) {
+							// Ocultar todas as tabelas
+							document.querySelectorAll('.hidden').forEach(function (table) {
+								table.style.display = 'none';
+							});
+
+							// Mostrar a tabela específica
+							document.getElementById(tableId).style.display = 'block';
+						}
+
+						$(document).ready(function () {
+							$('#sidebarToggle').click(function () {
+								$('#sidebar').toggleClass('collapsed');
+							});
+						});
+
+
+						// Filtros
+
+						var filtrosAtivos = [];
+
+						function toggleFiltros() {
+							var filtros = document.getElementById('filtros');
+							if (filtros.classList.contains('escondido')) {
+								filtros.classList.remove('escondido');
+								filtros.classList.add('mostrar');
+							} else {
+								filtros.classList.remove('mostrar');
+								filtros.classList.add('escondido');
+							}
+						}
+
+						function toggleFiltro(categoria) {
+							var botao = document.querySelector(`button[onclick="toggleFiltro('${categoria}')"]`);
+							var index = filtrosAtivos.indexOf(categoria);
+
+							// Bloqueia a seleção simultânea de "PoE" e "Não PoE"
+							if ((categoria === 'PoE' && filtrosAtivos.includes('Não PoE')) ||
+								(categoria === 'Não PoE' && filtrosAtivos.includes('PoE'))) {
+								alert('Você não pode selecionar "Mostrar PoE" e "Mostrar Não PoE" ao mesmo tempo.');
+								return;
+							}
+
+							// Bloqueia a seleção simultânea de "Gerenciável" e "Não Gerenciável"
+							if ((categoria === 'Gerenciável' && filtrosAtivos.includes('Não Gerenciável')) ||
+								(categoria === 'Não Gerenciável' && filtrosAtivos.includes('Gerenciável'))) {
+								alert('Você não pode selecionar "Mostrar Gerenciável" e "Mostrar Não Gerenciável" ao mesmo tempo.');
+								return;
+							}
+
+							if ((categoria === 'Possui SFP' && filtrosAtivos.includes('Não Possui SFP')) ||
+								(categoria === 'Não Possui SFP' && filtrosAtivos.includes('Possui SFP'))) {
+								alert('Você não pode selecionar "Mostrar Possui SFP" e "Mostrar Não Possui SFP" ao mesmo tempo.');
+								return;
+							}
+
+							if (index > -1) {
+								// Se o filtro já está ativo, removê-lo
+								filtrosAtivos.splice(index, 1);
+								botao.classList.remove('ativo');
+							} else {
+								// Caso contrário, adicionar o filtro
+								filtrosAtivos.push(categoria);
+								botao.classList.add('ativo');
+							}
+
+							filtrarTabela();
+						}
+
+						function resetFiltros() {
+							filtrosAtivos = [];
+							var botoes = document.querySelectorAll('.botao-filtro');
+							botoes.forEach(function (botao) {
+								botao.classList.remove('ativo');
+							});
+							filtrarTabela();
+						}
+
+						function filtrarTabela() {
+							var tabela = document.getElementById('tabelaProdutos');
+							var linhas = tabela.getElementsByTagName('tr');
+
+							for (var i = 1; i < linhas.length; i++) {
+								var colunaGerenciavel = linhas[i].getElementsByTagName('td')[4];
+								var colunaPoE = linhas[i].getElementsByTagName('td')[5];
+								var colunaProjeto = linhas[i].getElementsByClassName('qwert')[0];
+								var colunaSFP = linhas[i].getElementsByTagName('td')[3];  // Atualize o índice para a coluna correta
+
+								var sfpAlt = colunaSFP.getElementsByTagName('img')[0].alt;  // Corrige a verificação e índice da coluna SFP
+								var gerenciavelAlt = colunaGerenciavel.getElementsByTagName('img')[0].alt;
+								var poeAlt = colunaPoE.getElementsByTagName('img')[0].alt;
+								var temProjeto = colunaProjeto && colunaProjeto.querySelector('.info-button-proj') !== null;
+
+								// Condição inicial é que o produto seja mostrado
+								var mostrar = true;
+
+								// Verifica cada filtro ativo
+								if (filtrosAtivos.includes('Gerenciável') && gerenciavelAlt !== 'Gerenciável') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não Gerenciável') && gerenciavelAlt !== 'Não Gerenciável') {
+									mostrar = false;
+								}
+
+								if (filtrosAtivos.includes('Possui SFP') && sfpAlt !== 'Possui SFP') {  // Verificação SFP
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não Possui SFP') && sfpAlt !== 'Não Possui SFP') {  // Verificação SFP
+									mostrar = false;
+								}
+
+								if (filtrosAtivos.includes('PoE') && poeAlt !== 'PoE') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não PoE') && poeAlt !== 'Não PoE') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Compra exclusivamente via registro de projeto.') && !temProjeto) {
+									mostrar = false;
+								}
+
+								// Define a visibilidade da linha
+								if (mostrar) {
+									linhas[i].style.display = '';
+								} else {
+									linhas[i].style.display = 'none';
+								}
+							}
+						}
+
+
+						var filtrosAtivos = [];
+
+						function toggleFiltros18() {
+							var filtros = document.getElementById('filtros18');
+							if (filtros.classList.contains('escondido')) {
+								filtros.classList.remove('escondido');
+								filtros.classList.add('mostrar');
+							} else {
+								filtros.classList.remove('mostrar');
+								filtros.classList.add('escondido');
+							}
+						}
+
+						function toggleFiltros18(categoria) {
+							var botao = document.querySelector(`button[onclick="toggleFiltros18('${categoria}')"]`);
+							var index = filtrosAtivos.indexOf(categoria);
+
+							// Bloqueia a seleção simultânea de "PoE" e "Não PoE"
+							if ((categoria === 'PoE' && filtrosAtivos.includes('Não PoE')) ||
+								(categoria === 'Não PoE' && filtrosAtivos.includes('PoE'))) {
+								alert('Você não pode selecionar "Mostrar PoE" e "Mostrar Não PoE" ao mesmo tempo.');
+								return;
+							}
+
+							// Bloqueia a seleção simultânea de "Gerenciável" e "Não Gerenciável"
+							if ((categoria === 'Gerenciável' && filtrosAtivos.includes('Não Gerenciável')) ||
+								(categoria === 'Não Gerenciável' && filtrosAtivos.includes('Gerenciável'))) {
+								alert('Você não pode selecionar "Mostrar Gerenciável" e "Mostrar Não Gerenciável" ao mesmo tempo.');
+								return;
+							}
+
+							// Bloqueia a seleção simultânea de "Possui SFP" e "Não Possui SFP"
+							if ((categoria === 'Possui SFP' && filtrosAtivos.includes('Não Possui SFP')) ||
+								(categoria === 'Não Possui SFP' && filtrosAtivos.includes('Possui SFP'))) {
+								alert('Você não pode selecionar "Mostrar Possui SFP" e "Mostrar Não Possui SFP" ao mesmo tempo.');
+								return;
+							}
+
+							// Bloqueia a seleção simultânea de filtros de portas
+							var filtrosDePortas = ['5 Portas', '8 Portas', '9 Portas', '10 Portas', '16 Portas', '24 Portas', '48 Portas'];
+							if (filtrosDePortas.includes(categoria)) {
+								for (var i = 0; i < filtrosDePortas.length; i++) {
+									if (filtrosAtivos.includes(filtrosDePortas[i]) && filtrosDePortas[i] !== categoria) {
+										alert('Você não pode selecionar múltiplos filtros de portas ao mesmo tempo.');
+										return;
+									}
+								}
+							}
+
+							if (index > -1) {
+								// Se o filtro já está ativo, removê-lo
+								filtrosAtivos.splice(index, 1);
+								botao.classList.remove('ativo');
+							} else {
+								// Caso contrário, adicionar o filtro
+								filtrosAtivos.push(categoria);
+								botao.classList.add('ativo');
+							}
+
+							filtrarTabela18();
+						}
+
+						function resetFiltros18() {
+							filtrosAtivos = [];
+							var botoes = document.querySelectorAll('.botao-filtro');
+							botoes.forEach(function (botao) {
+								botao.classList.remove('ativo');
+							});
+							filtrarTabela18();
+						}
+
+						function filtrarTabela18() {
+							var tabela = document.getElementById('tabelaProdutos18');
+							var linhas = tabela.getElementsByTagName('tr');
+
+							for (var i = 1; i < linhas.length; i++) {
+								var colunaGerenciavel = linhas[i].getElementsByTagName('td')[3];
+								var colunaPoE = linhas[i].getElementsByTagName('td')[4];
+								var colunaProjeto = linhas[i].getElementsByClassName('qwert')[0];
+								var colunaSFP = linhas[i].getElementsByTagName('td')[7];  // Atualize o índice para a coluna correta
+
+								var sfpAlt = colunaSFP.getElementsByTagName('img')[0].alt;  // Corrige a verificação e índice da coluna SFP
+								var gerenciavelAlt = colunaGerenciavel.getElementsByTagName('img')[0].alt;
+								var poeAlt = colunaPoE.getElementsByTagName('img')[0].alt;
+								var temProjeto = colunaProjeto && colunaProjeto.querySelector('.info-button-proj') !== null;
+
+								// Condição inicial é que o produto seja mostrado
+								var mostrar = true;
+
+								// Verifica cada filtro ativo
+								if (filtrosAtivos.includes('Gerenciável') && gerenciavelAlt !== 'Gerenciável') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não Gerenciável') && gerenciavelAlt !== 'Não Gerenciável') {
+									mostrar = false;
+								}
+
+								if (filtrosAtivos.includes('Possui SFP') && sfpAlt !== 'Possui SFP') {  // Verificação SFP
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não Possui SFP') && sfpAlt !== 'Não Possui SFP') {  // Verificação SFP
+									mostrar = false;
+								}
+
+								if (filtrosAtivos.includes('PoE') && poeAlt !== 'PoE') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Não PoE') && poeAlt !== 'Não PoE') {
+									mostrar = false;
+								}
+								if (filtrosAtivos.includes('Compra exclusivamente via registro de projeto.') && !temProjeto) {
+									mostrar = false;
+								}
+
+								// Define a visibilidade da linha
+								if (mostrar) {
+									linhas[i].style.display = '';
+								} else {
+									linhas[i].style.display = 'none';
+								}
+							}
+						}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						function searchTable1() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput1");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table1 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+						function searchTable2() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput2");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table2 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+						function searchTable3() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput3");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table3 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+
+
+						function searchTable17() {
+							// Obter o valor do campo de pesquisa
+							const input = document.getElementById("searchInput");
+							const filter = input.value.toLowerCase();
+
+							// Obter a tabela e suas linhas
+							const table = document.getElementById("tabelaProdutos");
+							const tr = table.getElementsByTagName("tr");
+
+							// Iterar por cada linha, excluindo o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const tds = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Iterar por cada célula na linha atual
+								for (let j = 0; j < tds.length; j++) {
+									const td = tds[j];
+									if (td) {
+										const txtValue = td.textContent || td.innerText;
+
+										// Verificar se o valor do filtro está presente no texto da célula
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break; // Sair do loop interno se um resultado for encontrado
+										}
+									}
+								}
+
+								// Mostrar ou ocultar a linha com base no resultado da pesquisa
+								tr[i].style.display = found ? "" : "none";
+							}
+						}
+
+
+						function searchTable4() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput4");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table4 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+						function searchTable5() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput5");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table5 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+						function searchTable6() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput6");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table6 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+
+						function searchTable9() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput9");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table9 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+
+						function searchTable10() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput10");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table10 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+
+
+						function searchTable11() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput11");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table11 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+						function searchTable12() {
+							// Obtém o valor do input de pesquisa
+							const input = document.getElementById("searchInput12");
+							const filter = input.value.toLowerCase();
+							const table = document.querySelector("#table13 table");
+							const tr = table.getElementsByTagName("tr");
+
+							// Itera por todas as linhas da tabela, exceto o cabeçalho
+							for (let i = 1; i < tr.length; i++) {
+								const td = tr[i].getElementsByTagName("td");
+								let found = false;
+
+								// Itera por todas as células da linha atual
+								for (let j = 0; j < td.length; j++) {
+									if (td[j]) {
+										const txtValue = td[j].textContent || td[j].innerText;
+										if (txtValue.toLowerCase().indexOf(filter) > -1) {
+											found = true;
+											break;
+										}
+									}
+								}
+
+								// Mostra ou esconde a linha com base na pesquisa
+								if (found) {
+									tr[i].style.display = "";
+								} else {
+									tr[i].style.display = "none";
+								}
+							}
+						}
+
+
+
+						function sortTable(n) {
+							const table = document.getElementById("tabelaProdutos");
+							let rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+							switching = true;
+							dir = "asc"; // Inicialmente, ordenar de forma ascendente
+
+							while (switching) {
+								switching = false;
+								rows = table.rows;
+								for (i = 1; i < (rows.length - 1); i++) {
+									shouldSwitch = false;
+									x = rows[i].getElementsByTagName("TD")[n];
+									y = rows[i + 1].getElementsByTagName("TD")[n];
+									if (dir === "asc") {
+										if (parseInt(x.innerHTML) > parseInt(y.innerHTML)) {
+											shouldSwitch = true;
+											break;
+										}
+									} else if (dir === "desc") {
+										if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+											shouldSwitch = true;
+											break;
+										}
+									}
+								}
+								if (shouldSwitch) {
+									rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+									switching = true;
+									switchcount++;
+								} else {
+									if (switchcount === 0 && dir === "asc") {
+										dir = "desc";
+										switching = true;
+									}
+								}
+							}
+						}
+
+					</script>
+					<h3><button class="info-buttonleg">F</button>
+						<span class="tooltiptextleg">Parceria Intelbras e FiberHome</span>
+					</h3>
+					<h3><button class="info-button-curio">?</button>
+						<span class="tooltiptext">Informativo/curiosidade sobre o produto.</span>
+					</h3>
+					<h3><button class="info-button-proj">P</button>
+						<span class="tooltiptext">Compra exclusivamente via registro de projeto.</span>
+					</h3>
+
+					<!-- Incluindo o JavaScript do Bootstrap e dependências -->
+					<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+					<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
